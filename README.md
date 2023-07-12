@@ -323,3 +323,7 @@ Add to `_tutorial-header.scss`
 }
 ```
 
+# Tutorial Step 2 actions
+
+
+
