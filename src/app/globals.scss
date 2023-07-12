@@ -2,6 +2,7 @@
 @use '@carbon/react/scss/breakpoint' as *;
 
 @use '@/components/TutorialHeader/tutorial-header';
+@use '@/components/Info/info';
 
 @use '@/app/home/landing-page';
 @use '@/app/repos/repo-page';

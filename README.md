@@ -325,7 +325,7 @@ Add to `_tutorial-header.scss`
 
 ## Tutorial Step 2 actions
 
-## Tutorial Step 2 actions
+## Tutorial Step 3 actions
 
 ### Add GitHub Client API Library
 ```bash
@@ -334,6 +334,31 @@ yarn add encoding
 ```
 The `encoding` package is a workaround whilst Next team fix, see issue [here](https://github.com/supabase/supabase-js/issues/612)
 
+## Tutorial Step 4 actions
+Fix image links to be `next/image`
+
+`app/home/page.js`
+```
+import Image from 'next/image'
+
+...
+                  <Button>Learn more</Button>
+                </Column>
+                <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+                  <Image 
+                    className="landing-page__illo"
+                    src={`tab-illo.png`}
+                    alt="Carbon illustration"
+                  />
+                </Column>
+              </Grid>
+            </TabPanel>
+...
+```
+
+## Tutorial Step 4 actions
+
+## Tutorial Step 5 actions
 
 
 
