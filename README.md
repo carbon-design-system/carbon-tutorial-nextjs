@@ -359,6 +359,38 @@ import Image from 'next/image'
 ## Tutorial Step 4 actions
 
 ## Tutorial Step 5 actions
+```bash
+yarn build
+```
+Throws some errors.
 
+ESLint
+```
+                    <TableHeader {...getHeaderProps({ header })} key={header}>
+                      {header.header}
+                    </TableHeader>
+```
 
+change exports and imports
+
+`home/page.js`
+```
+...
+function LandingPage() {
+  return (
+...
+
+export default LandingPage;
+```
+
+`page.js`
+```
+import LandingPage from './home/page';
+
+export default function Page() {
+    return <LandingPage />;
+  }
+```
+
+Updated `v11-next-step-5` branch.
 
