@@ -11,6 +11,8 @@
   "dependencies": {
     "@carbon/icons-react": "^11.22.1",
     "@carbon/react": "1.33.0",
+    "@octokit/core": "4.2.0",
+    "encoding": "^0.1.13",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",

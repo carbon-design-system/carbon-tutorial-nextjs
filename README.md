@@ -325,5 +325,15 @@ Add to `_tutorial-header.scss`
 
 ## Tutorial Step 2 actions
 
+## Tutorial Step 2 actions
+
+### Add GitHub Client API Library
+```bash
+yarn add @octokit/core@4.2.0
+yarn add encoding
+```
+The `encoding` package is a workaround whilst Next team fix, see issue [here](https://github.com/supabase/supabase-js/issues/612)
+
+
 
 

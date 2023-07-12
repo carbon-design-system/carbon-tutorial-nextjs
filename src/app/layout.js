@@ -3,7 +3,7 @@ import './globals.scss'
 import { Providers } from './providers';
 
 export const metadata = {
-  title: 'Carbon + Next 13',
+  title: 'Carbon + Next13',
   description: 'IBM Carbon Tutorial with NextJS 13',
 }
 
