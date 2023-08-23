@@ -1,7 +1,11 @@
-# Carbon Tutorial for NextJS 13
+# Step 1
+
+## Carbon Tutorial for NextJS 13
+
 Base NextJS 13 app using IBM Carbon Design System React components
 
 ## Create NextJS 13 app
+
 ```bash
 yarn create next-app
 
@@ -16,7 +20,9 @@ yarn create next-app
 cd carbon-tutorial-next
 yarn dev
 ```
+
 Configure paths in `jsconfig.json`
+
 ```
 {
   "compilerOptions": {
@@ -28,17 +34,3 @@ Configure paths in `jsconfig.json`
   }
 }
 ```
-
-## Update the NextJS Bootstrap
-Modify some of the boostrap code in order to support the Carbon components.
-
-In `app/layout.js` (RootLayout) take out:
-```
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
-```
-Take out className tag from <body> and update the meta data.
-
-Then `yarn dev` to confirm.
-
-
