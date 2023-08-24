@@ -14,6 +14,7 @@ import {
 } from '@carbon/react';
 import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { InfoSection, InfoCard } from '@/components/Info/Info';
+import Image from 'next/image';
 
 function LandingPage() {
   return (
@@ -24,7 +25,9 @@ function LandingPage() {
             <a href="/">Getting started</a>
           </BreadcrumbItem>
         </Breadcrumb>
-        <h1 className="landing-page__heading">Design &amp; build with Carbon</h1>
+        <h1 className="landing-page__heading">
+          Design &amp; build with Carbon
+        </h1>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
         <Tabs defaultSelectedIndex={0}>
@@ -36,39 +39,56 @@ function LandingPage() {
           <TabPanels>
             <TabPanel>
               <Grid className="tabs-group-content">
-                <Column md={4} lg={7} sm={4} className="landing-page__tab-content">
+                <Column
+                  md={4}
+                  lg={7}
+                  sm={4}
+                  className="landing-page__tab-content"
+                >
                   <h2 className="landing-page__subheading">What is Carbon?</h2>
                   <p className="landing-page__p">
-                    Carbon is IBM’s open-source design system for digital products and
-                    experiences. With the IBM Design Language as its foundation, the
-                    system consists of working code, design tools and resources, human
-                    interface guidelines, and a vibrant community of contributors.
+                    Carbon is IBM’s open-source design system for digital
+                    products and experiences. With the IBM Design Language as
+                    its foundation, the system consists of working code, design
+                    tools and resources, human interface guidelines, and a
+                    vibrant community of contributors.
                   </p>
                   <Button>Learn more</Button>
                 </Column>
                 <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
-                  <img 
+                  <Image
                     className="landing-page__illo"
-                    src={`tab-illo.png`}
-                    layout='fixed'
+                    src="/tab-illo.png"
                     alt="Carbon illustration"
+                    width={200}
+                    height={200}
                   />
                 </Column>
               </Grid>
             </TabPanel>
             <TabPanel>
               <Grid className="tabs-group-content">
-                <Column lg={16} md={8} sm={4} className="landing-page__tab-content">
-                  Rapidly build beautiful and accessible experiences. The Carbon kit
-                  contains all resources you need to get started.
+                <Column
+                  lg={16}
+                  md={8}
+                  sm={4}
+                  className="landing-page__tab-content"
+                >
+                  Rapidly build beautiful and accessible experiences. The Carbon
+                  kit contains all resources you need to get started.
                 </Column>
               </Grid>
             </TabPanel>
             <TabPanel>
               <Grid className="tabs-group-content">
-                <Column lg={16} md={8} sm={4} className="landing-page__tab-content">
-                  Carbon provides styles and components in Vanilla, React, Next, Angular,
-                  and Vue for anyone building on the web.
+                <Column
+                  lg={16}
+                  md={8}
+                  sm={4}
+                  className="landing-page__tab-content"
+                >
+                  Carbon provides styles and components in Vanilla, React, Next,
+                  Angular, and Vue for anyone building on the web.
                 </Column>
               </Grid>
             </TabPanel>
@@ -95,7 +115,7 @@ function LandingPage() {
         </InfoSection>
       </Column>
     </Grid>
- )
+  );
 }
 
 export default LandingPage;
