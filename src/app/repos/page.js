@@ -1,12 +1,12 @@
 'use client';
 
 import RepoTable from './RepoTable';
-import { 
-  Link, 
-  DataTableSkeleton, 
-  Pagination, 
-  Column, 
-  Grid 
+import {
+  Link,
+  DataTableSkeleton,
+  Pagination,
+  Column,
+  Grid,
 } from '@carbon/react';
 
 import React, { useEffect, useState } from 'react';
@@ -106,14 +106,14 @@ function RepoPage() {
       </Grid>
     );
   }
-  
+
   if (error) {
     return `Error! ${error}`;
   }
 
   return (
     <Grid className="repo-page">
-      <Column lg={16} className="repo-page__r1">
+      <Column lg={16} md={8} sm={4} className="repo-page__r1">
         <RepoTable
           headers={headers}
           rows={rows.slice(firstRowIndex, firstRowIndex + currentPageSize)}
@@ -135,6 +135,6 @@ function RepoPage() {
       </Column>
     </Grid>
   );
-};
+}
 
 export default RepoPage;
