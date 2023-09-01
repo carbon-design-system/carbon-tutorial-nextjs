@@ -5,7 +5,7 @@ export const metadata = {
   description: 'IBM Carbon Tutorial with NextJS 13',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayoutttt({ children }) {
   return (
     <html lang="en">
       <body>{children}</body>
