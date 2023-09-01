@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: Close when CI Passes Step 1
     conditions:
-      - 'status-success=ci / step-one'
+      - 'status-success=step-one'
     actions:
       close:
         message:
@@ -12,7 +12,7 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 1
     conditions:
-      - 'status-failure=ci / step-one'
+      - 'status-failure=step-one'
     actions:
       comment:
         message:
@@ -24,7 +24,7 @@ pull_request_rules:
         add: ['status: needs correction']
   - name: Close when CI Passes Step 2
     conditions:
-      - 'status-success=ci / step-two'
+      - 'status-success=step-two'
     actions:
       close:
         message:
@@ -35,7 +35,7 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 2
     conditions:
-      - 'status-failure=ci / step-two'
+      - 'status-failure=step-two'
     actions:
       comment:
         message:
@@ -47,7 +47,7 @@ pull_request_rules:
         add: ['status: needs correction']
   - name: Close when CI Passes Step 3
     conditions:
-      - 'status-success=ci / step-three'
+      - 'status-success=step-three'
     actions:
       close:
         message:
@@ -58,7 +58,7 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 3
     conditions:
-      - 'status-failure=ci / step-three'
+      - 'status-failure=step-three'
     actions:
       comment:
         message:
@@ -70,7 +70,7 @@ pull_request_rules:
         add: ['status: needs correction']
   - name: Close when CI Passes Step 4
     conditions:
-      - 'status-success=ci / step-four'
+      - 'status-success=step-four'
     actions:
       close:
         message:
@@ -81,7 +81,7 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 4
     conditions:
-      - 'status-failure=ci / step-four'
+      - 'status-failure=step-four'
     actions:
       comment:
         message:
@@ -93,7 +93,7 @@ pull_request_rules:
         add: ['status: needs correction']
   - name: Close when CI Passes Step 5
     conditions:
-      - 'status-success=ci / step-five'
+      - 'status-success=step-five'
     actions:
       close:
         message: "Congratulations! You've completed the Carbon tutorial for React!"
@@ -102,7 +102,7 @@ pull_request_rules:
         remove: ['status: needs correction']
   - name: Comment when CI fails Step 5
     conditions:
-      - 'status-failure=ci / step-five'
+      - 'status-failure=step-five'
     actions:
       comment:
         message: 'Hi, it looks like you are missing something. Double check the
