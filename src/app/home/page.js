@@ -1,8 +1,5 @@
-`use client`
+`use client`;
 
 export default function LandingPage() {
-    return (
-        <div>LANDING PAGE</div>
-    );
-};
-
+  return <div>LANDING PAGE</div>;
+}
