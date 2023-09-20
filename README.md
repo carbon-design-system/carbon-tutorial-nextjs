@@ -1,6 +1,8 @@
 # Carbon Tutorial for NextJS 13
 
-Base NextJS 13 app using IBM Carbon Design System React components
+This tutorial will guide you in creating a NextJS app with the [Carbon Design System](https://www.carbondesignsystem.com/). We’ll teach you the ins and outs of using Carbon React components, while introducing web development best practices along the way.
+
+Get started by visiting the [tutorial instructions](https://carbondesignsystem.com/developing/next-tutorial/overview/).
 
 ## Create NextJS 13 app
 
