@@ -2,7 +2,7 @@
 
 ## Carbon Tutorial for NextJS 13
 
-Base NextJS 13 app using IBM Carbon Design System React components
+Base NextJS 13 app using IBM Carbon Design System React components.
 
 ## Create NextJS 13 app
 

@@ -12,7 +12,11 @@ import {
   Grid,
   Column,
 } from '@carbon/react';
-import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
+import {
+  Advocate,
+  Globe,
+  AcceleratingTransformation,
+} from '@carbon/pictograms-react';
 import { InfoSection, InfoCard } from '@/components/Info/Info';
 import Image from 'next/image';
 
@@ -100,12 +104,12 @@ function LandingPage() {
           <InfoCard
             heading="Carbon is Open"
             body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
-            icon={() => <PersonFavorite size={32} />}
+            icon={() => <Advocate size={32} />}
           />
           <InfoCard
             heading="Carbon is Modular"
             body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
-            icon={() => <Application size={32} />}
+            icon={() => <AcceleratingTransformation size={32} />}
           />
           <InfoCard
             heading="Carbon is Consistent"
