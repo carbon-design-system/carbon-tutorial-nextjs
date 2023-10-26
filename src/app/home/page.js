@@ -58,8 +58,8 @@ export function LandingPage() {
                     className="landing-page__illo"
                     src="/tab-illo.png"
                     alt="Carbon illustration"
-                    width={200}
-                    height={200}
+                    width={800}
+                    height={500}
                   />
                 </Column>
               </Grid>
