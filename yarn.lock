@@ -21,7 +21,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.9.1":
+"@babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.22.15":
   version: 7.23.2
   resolution: "@babel/runtime@npm:7.23.2"
   dependencies:
@@ -43,13 +43,6 @@ __metadata:
   version: 11.20.1
   resolution: "@carbon/colors@npm:11.20.1"
   checksum: 7897f1808d914e3e78f2b987ce50ee74c2fd963bb64ceec3542a7e11fe9a8c6eec96336884f3a2aaad293a6cb59a85bb4e6bf106e513ab0c53563893c50b04eb
-  languageName: node
-  linkType: hard
-
-"@carbon/feature-flags@npm:^0.15.0":
-  version: 0.15.0
-  resolution: "@carbon/feature-flags@npm:0.15.0"
-  checksum: e3b4ed89d38908d9bcc268745c37dae40b7fb9a2a5da370dcf2a72b4d31345a6fe9d8e03073401918f4aceefd05d8375ea21fac61eb9b79bf61b78ad52058bd7
   languageName: node
   linkType: hard
 
@@ -89,7 +82,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/icons-react@npm:^11.22.0":
+"@carbon/icons-react@npm:^11.30.1":
   version: 11.30.1
   resolution: "@carbon/icons-react@npm:11.30.1"
   dependencies:
@@ -102,7 +95,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/layout@npm:^11.16.0, @carbon/layout@npm:^11.20.0, @carbon/layout@npm:^11.20.1":
+"@carbon/layout@npm:^11.20.0, @carbon/layout@npm:^11.20.1":
   version: 11.20.1
   resolution: "@carbon/layout@npm:11.20.1"
   checksum: e8ce29f2995c67c79a26ac65c73d1e2fadf2fb906fad64b55d8d0cc1c21aab6103deaf08519cbd972956fb289d048c73e424f101994745f3965fc31f53598752
@@ -116,19 +109,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/react@npm:1.33.0":
-  version: 1.33.0
-  resolution: "@carbon/react@npm:1.33.0"
+"@carbon/react@npm:^1.35.0":
+  version: 1.42.1
+  resolution: "@carbon/react@npm:1.42.1"
   dependencies:
     "@babel/runtime": "npm:^7.18.3"
-    "@carbon/feature-flags": "npm:^0.15.0"
-    "@carbon/icons-react": "npm:^11.22.0"
-    "@carbon/layout": "npm:^11.16.0"
-    "@carbon/styles": "npm:^1.33.0"
+    "@carbon/feature-flags": "npm:^0.16.0"
+    "@carbon/icons-react": "npm:^11.30.1"
+    "@carbon/layout": "npm:^11.20.0"
+    "@carbon/styles": "npm:^1.42.1"
     "@carbon/telemetry": "npm:0.1.0"
     classnames: "npm:2.3.2"
     copy-to-clipboard: "npm:^3.3.1"
-    downshift: "npm:5.2.1"
+    downshift: "npm:8.2.2"
     flatpickr: "npm:4.6.9"
     invariant: "npm:^2.2.3"
     lodash.debounce: "npm:^4.0.8"
@@ -145,11 +138,11 @@ __metadata:
     react: ^16.8.6 || ^17.0.1 || ^18.2.0
     react-dom: ^16.8.6 || ^17.0.1 || ^18.2.0
     sass: ^1.33.0
-  checksum: b5fc77390308b22b1dfd26c653614528ae49264aa6711eb1b8cdb073394f9a17bf106c0f10b7fa8314b6c07195b95758da100bd327c1d4701b57042209886ce0
+  checksum: 68e6b6ffedd59441c1ff6702c846634e0bb1209f64ddcc30fd206fc0ce6b878774405c7afb91b120bc2838dbebf9771e9be3faeb1ba9f8e285b3a5f366a03953
   languageName: node
   linkType: hard
 
-"@carbon/styles@npm:^1.33.0":
+"@carbon/styles@npm:^1.42.1":
   version: 1.42.1
   resolution: "@carbon/styles@npm:1.42.1"
   dependencies:
@@ -1305,7 +1298,7 @@ __metadata:
   resolution: "carbon-tutorial-nextjs@workspace:."
   dependencies:
     "@carbon/icons-react": "npm:11.30.0"
-    "@carbon/react": "npm:1.33.0"
+    "@carbon/react": "npm:^1.35.0"
     "@commitlint/cli": "npm:7.5.2"
     "@commitlint/config-conventional": "npm:7.5.0"
     eslint: "npm:8.44.0"
@@ -1543,10 +1536,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compute-scroll-into-view@npm:^1.0.13":
-  version: 1.0.20
-  resolution: "compute-scroll-into-view@npm:1.0.20"
-  checksum: 19034322590bfce59cb6939b3603e7aaf6f0d4128b8627bbc136e71c8714905e2f8bf2ba0cb7f153c6e8cdb8ad907ffd6d0188ccc7625dc05790a59ae6a81f01
+"compute-scroll-into-view@npm:^3.0.3":
+  version: 3.1.0
+  resolution: "compute-scroll-into-view@npm:3.1.0"
+  checksum: bf305c4ece8e5c59ed3f7ed82b6dab5b7487ce26f56a693d903869964712870fccb08fe31d40edcbd600b03c99198f54d443acb315d674bd64fd344410c8672e
   languageName: node
   linkType: hard
 
@@ -1874,17 +1867,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"downshift@npm:5.2.1":
-  version: 5.2.1
-  resolution: "downshift@npm:5.2.1"
+"downshift@npm:8.2.2":
+  version: 8.2.2
+  resolution: "downshift@npm:8.2.2"
   dependencies:
-    "@babel/runtime": "npm:^7.9.1"
-    compute-scroll-into-view: "npm:^1.0.13"
-    prop-types: "npm:^15.7.2"
-    react-is: "npm:^16.13.1"
+    "@babel/runtime": "npm:^7.22.15"
+    compute-scroll-into-view: "npm:^3.0.3"
+    prop-types: "npm:^15.8.1"
+    react-is: "npm:^18.2.0"
+    tslib: "npm:^2.6.2"
   peerDependencies:
-    react: ">=0.14.9"
-  checksum: c9ed4aafd6d1f038fa26e6b74c389ab714dab1f66b0c7f6864b8a918a563dfbe60d6f4c100823eaf3d77323b35ef600092105528038f578ced0b5967f6648f24
+    react: ">=16.12.0"
+  checksum: e15ef76d995af5cff5ca301e132345befc37154d00707dc85bfdccc3b5471fdd32a8b52bff9d87a40ba587f80ecf8dd2aae423759d17f40089b51f15a8ff6448
   languageName: node
   linkType: hard
 
@@ -6496,6 +6490,13 @@ __metadata:
   version: 2.6.0
   resolution: "tslib@npm:2.6.0"
   checksum: 8d18020a8b9e70ecc529a744c883c095f177805efdbc9786bd50bd82a46c17547923133c5444fbcaf1f7f1c44e0e29c89f73ecf6d8fd1039668024a073a81dc6
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
   languageName: node
   linkType: hard
 
