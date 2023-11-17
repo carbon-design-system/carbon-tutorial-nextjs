@@ -19,7 +19,7 @@ yarn create next-app
 ✔ Would you like to use App Router? (recommended) … No / *Yes
 ✔ Would you like to customize the default import alias? … *No / Yes
 
-cd carbon-tutorial-next
+cd carbon-tutorial-nextjs
 yarn dev
 ```
 
