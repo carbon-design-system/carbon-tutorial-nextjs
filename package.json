@@ -16,6 +16,7 @@
     "format:diff": "prettier --list-different \"**/*.{js,md,scss}\""
   },
   "dependencies": {
+    "@carbon/pictograms-react": "^11.52.1",
     "@carbon/react": "^1.35.0",
     "@octokit/core": "4.2.0",
     "eslint": "8.44.0",
