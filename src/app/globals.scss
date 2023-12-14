@@ -1,0 +1,15 @@
+@use '@/components/TutorialHeader/tutorial-header';
+@use '@carbon/react';
+@use '@/app/home/landing-page';
+@use '@/app/repos/repo-page';
+@media (min-width: 42rem) {
+  .cds--grid--no-gutter {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.cds--content {
+  margin-top: 3rem;
+  background: var(--cds-background);
+}
