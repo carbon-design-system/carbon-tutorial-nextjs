@@ -1,5 +1,6 @@
-import LandingPage from './home/page';
+'use client';
+import Home from './home/page';
 
-export default function Page() {
-    return <LandingPage />;
-  }
+export default () => {
+  return <Home />;
+};
