@@ -1,9 +1,6 @@
-import './globals.css';
+'use client';
 
-export const metadata = {
-  title: 'Carbon + Next13',
-  description: 'IBM Carbon Tutorial with NextJS 13',
-};
+import './globals.sass';
 
 export default function RootLayout({ children }) {
   return (
