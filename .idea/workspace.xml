@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3462b2e6-3cd5-4302-9c73-be9b7a9b7aea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/home/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/home/_overrides.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/repos/RepoTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/_landing-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/_landing-page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/repos/_repo-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/repos/_repo-page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/repos/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/repos/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2clLeuJByosKEkAOjJZUwgzd8FT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "v11-next-step-2",
+    "last_opened_file_path": "/Users/kaanbingol/Documents/carbon/carbon-tutorial-nextjs/src/app/repos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/repos" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3462b2e6-3cd5-4302-9c73-be9b7a9b7aea" name="Changes" comment="" />
+      <created>1708681317974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708681317974</updated>
+      <workItem from="1708681321106" duration="1538000" />
+      <workItem from="1708682865454" duration="1259000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
