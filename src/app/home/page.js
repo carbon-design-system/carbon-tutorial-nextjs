@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Breadcrumb,
@@ -11,14 +11,14 @@ import {
   TabPanel,
   Grid,
   Column,
-} from '@carbon/react';
+} from "@carbon/react";
 import {
   Advocate,
   Globe,
   AcceleratingTransformation,
-} from '@carbon/pictograms-react';
-import { InfoSection, InfoCard } from '@/components/Info/Info';
-import Image from 'next/image';
+} from "@carbon/pictograms-react";
+import { InfoSection, InfoCard } from "@/components/Info/Info";
+import Image from "next/image";
 
 export default function LandingPage() {
   return (
@@ -64,8 +64,8 @@ export default function LandingPage() {
                     className="landing-page__illo"
                     src="/tab-illo.png"
                     alt="Carbon illustration"
-                    width={786}
-                    height={647}
+                    width={604}
+                    height={498}
                   />
                 </Column>
               </Grid>
