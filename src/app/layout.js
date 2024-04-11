@@ -1,11 +1,11 @@
-import './globals.scss'
+import './globals.scss';
 
 import { Providers } from './providers';
 
 export const metadata = {
   title: 'Carbon + Next13',
   description: 'IBM Carbon Tutorial with NextJS 13',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -14,5 +14,5 @@ export default function RootLayout({ children }) {
         <Providers>{children}</Providers>
       </body>
     </html>
-  )
+  );
 }
