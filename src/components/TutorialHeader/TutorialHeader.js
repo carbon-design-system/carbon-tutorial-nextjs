@@ -14,6 +14,7 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from '@carbon/react';
+
 import { Switcher, Notification, UserAvatar } from '@carbon/icons-react';
 
 import Link from 'next/link';
