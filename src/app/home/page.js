@@ -59,7 +59,7 @@ export default function LandingPage() {
                   </p>
                   <Button>Learn more</Button>
                 </Column>
-                <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+                <Column md={4} lg={{ span: 8, offset: 8 }} sm={4}>
                   <Image
                     className="landing-page__illo"
                     src="/tab-illo.png"
