@@ -10,3 +10,9 @@
 .cds--header__global .cds--popover-caret {
   background-color: colors.$gray-20;
 }
+
+@media (max-width: 320px) {
+  .action-icons {
+    display: none;
+  }
+}
