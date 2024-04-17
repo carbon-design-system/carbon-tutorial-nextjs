@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Breadcrumb,
@@ -11,8 +11,8 @@ import {
   TabPanel,
   Grid,
   Column,
-} from '@carbon/react';
-import Image from 'next/image';
+} from "@carbon/react";
+import Image from "next/image";
 
 export default function LandingPage() {
   return (
@@ -43,7 +43,7 @@ export default function LandingPage() {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  <h2 className="landing-page__subheading">What is Carbon?</h2>
+                  <h3 className="landing-page__subheading">What is Carbon?</h3>
                   <p className="landing-page__p">
                     Carbon is IBM’s open-source design system for digital
                     products and experiences. With the IBM Design Language as
@@ -98,13 +98,13 @@ export default function LandingPage() {
           <Column md={4} lg={4} sm={4}>
             <h3 className="landing-page__label">The Principles</h3>
           </Column>
-          <Column md={4} lg={4} sm={4}>
+          <Column md={4} lg={4} sm={{ start: 2, span: 3 }}>
             Carbon is Open
           </Column>
-          <Column md={4} lg={4} sm={4}>
+          <Column md={4} lg={4} sm={{ start: 2, span: 3 }}>
             Carbon is Modular
           </Column>
-          <Column md={4} lg={4} sm={4}>
+          <Column md={4} lg={4} sm={{ start: 2, span: 3 }}>
             Carbon is Consistent
           </Column>
         </Grid>
