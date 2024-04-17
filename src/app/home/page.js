@@ -49,7 +49,7 @@ export default function LandingPage() {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  <h2 className="landing-page__subheading">What is Carbon?</h2>
+                  <h3 className="landing-page__subheading">What is Carbon?</h3>
                   <p className="landing-page__p">
                     Carbon is IBM’s open-source design system for digital
                     products and experiences. With the IBM Design Language as
