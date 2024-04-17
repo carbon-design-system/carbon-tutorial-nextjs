@@ -11,20 +11,6 @@
   float: inline-end;
 }
 
-@media (max-width: 672px) {
-  .landing-page__illo {
-    width: 528px;
-    height: 435px;
-    float: inline-start;
-  }
-}
-
-@media (max-width: 320px) {
-  .landing-page__illo {
-    display: none;
-  }
-}
-
 .landing-page__banner {
   padding-top: $spacing-05;
   padding-bottom: $spacing-07 * 4;
@@ -85,5 +71,23 @@
   @include breakpoint-down(md) {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 672px) {
+  .landing-page__illo {
+    width: 528px;
+    height: 435px;
+    float: inline-start;
+  }
+}
+
+@media (max-width: 320px) {
+  .landing-page__illo {
+    display: none;
+  }
+
+  .landing-page__banner {
+    padding-bottom: $spacing-05 * 4;
   }
 }
