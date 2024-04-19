@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Breadcrumb,
@@ -11,14 +11,14 @@ import {
   TabPanel,
   Grid,
   Column,
-} from "@carbon/react";
+} from '@carbon/react';
 import {
   Advocate,
   Globe,
   AcceleratingTransformation,
-} from "@carbon/pictograms-react";
-import { InfoSection, InfoCard } from "@/components/Info/Info";
-import Image from "next/image";
+} from '@carbon/pictograms-react';
+import { InfoSection, InfoCard } from '@/components/Info/Info';
+import Image from 'next/image';
 
 export default function LandingPage() {
   return (
@@ -100,7 +100,7 @@ export default function LandingPage() {
         </Tabs>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r3">
-        <InfoSection heading="The Principles" className="landing-page__r3">
+        <InfoSection heading="The Principles">
           <InfoCard
             heading="Carbon is Open"
             body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
