@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Breadcrumb,
@@ -11,8 +11,8 @@ import {
   TabPanel,
   Grid,
   Column,
-} from "@carbon/react";
-import Image from "next/image";
+} from '@carbon/react';
+import Image from 'next/image';
 
 export default function LandingPage() {
   return (
