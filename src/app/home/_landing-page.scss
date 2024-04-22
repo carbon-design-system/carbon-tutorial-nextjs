@@ -51,10 +51,20 @@
   padding-bottom: $spacing-09;
   padding-left: $spacing-06;
   @include landing-page-background;
+  max-height: 450px;
+  height: 100vh;
 }
 
 .landing-page__label {
   @include type-style('heading-01');
+
+  @include breakpoint-down(md) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.landing-page__title {
+  padding-bottom: 0.5rem;
 }
 
 .tabs-group {
@@ -71,6 +81,14 @@
   @include breakpoint-down(md) {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 1056px) {
+  .landing-page_info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 

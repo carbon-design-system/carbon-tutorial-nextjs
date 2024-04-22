@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Breadcrumb,
@@ -11,8 +11,8 @@ import {
   TabPanel,
   Grid,
   Column,
-} from "@carbon/react";
-import Image from "next/image";
+} from '@carbon/react';
+import Image from 'next/image';
 
 export default function LandingPage() {
   return (
@@ -95,16 +95,31 @@ export default function LandingPage() {
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r3">
         <Grid>
-          <Column md={4} lg={4} sm={4}>
+          <Column lg={4} md={2} sm={4}>
             <h3 className="landing-page__label">The Principles</h3>
           </Column>
-          <Column md={4} lg={4} sm={{ start: 2, span: 3 }}>
+          <Column
+            lg={{ start: 5, span: 3 }}
+            md={{ start: 3, span: 6 }}
+            sm={4}
+            className="landing-page__title"
+          >
             Carbon is Open
           </Column>
-          <Column md={4} lg={4} sm={{ start: 2, span: 3 }}>
+          <Column
+            lg={{ start: 9, span: 3 }}
+            md={{ start: 3, span: 6 }}
+            sm={4}
+            className="landing-page__title"
+          >
             Carbon is Modular
           </Column>
-          <Column md={4} lg={4} sm={{ start: 2, span: 3 }}>
+          <Column
+            lg={{ start: 13, span: 3 }}
+            md={{ start: 3, span: 6 }}
+            sm={4}
+            className="landing-page__title"
+          >
             Carbon is Consistent
           </Column>
         </Grid>
