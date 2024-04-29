@@ -72,8 +72,10 @@ export default function LandingPage() {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  Rapidly build beautiful and accessible experiences. The Carbon
-                  kit contains all resources you need to get started.
+                  <p className="landing-page__p">
+                    Rapidly build beautiful and accessible experiences. The
+                    Carbon kit contains all resources you need to get started.
+                  </p>
                 </Column>
               </Grid>
             </TabPanel>
@@ -85,8 +87,10 @@ export default function LandingPage() {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  Carbon provides styles and components in Vanilla, React,
-                  Angular, and Vue for anyone building on the web.
+                  <p className="landing-page__p">
+                    Carbon provides styles and components in Vanilla, React,
+                    Angular, and Vue for anyone building on the web.
+                  </p>
                 </Column>
               </Grid>
             </TabPanel>
