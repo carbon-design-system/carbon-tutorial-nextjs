@@ -6,9 +6,14 @@
 @use './mixins.scss' as *;
 @use './overrides.scss';
 
+html {
+  background-color: $layer-01;
+}
+
 .landing-page__illo {
   max-width: 100%;
   float: inline-end;
+  height: auto;
 }
 
 .landing-page__banner {
@@ -77,7 +82,7 @@
 @media (max-width: 672px) {
   .landing-page__illo {
     width: 528px;
-    height: 435px;
+    height: auto;
     float: inline-start;
   }
 }
