@@ -6,6 +6,10 @@
 @use './mixins.scss' as *;
 @use './overrides.scss';
 
+html {
+  background-color: $layer-01;
+}
+
 .landing-page__illo {
   max-width: 100%;
   float: inline-end;
