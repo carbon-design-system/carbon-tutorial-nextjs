@@ -62,6 +62,14 @@ html {
 
 .landing-page__label {
   @include type-style('heading-01');
+
+  @include breakpoint-down(md) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.landing-page__title {
+  padding-bottom: 0.5rem;
 }
 
 .tabs-group {
