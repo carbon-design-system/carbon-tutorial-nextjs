@@ -9,7 +9,7 @@ function createArrayFromPhrase(phrase) {
 
 const InfoSection = (props) => (
   <Grid className={`${props.className} info-section`}>
-    <Column md={8} lg={16} xlg={3}>
+    <Column sm={4} md={8} lg={16} xlg={3}>
       <h3 className="info-section__heading">{props.heading}</h3>
     </Column>
     {props.children}
