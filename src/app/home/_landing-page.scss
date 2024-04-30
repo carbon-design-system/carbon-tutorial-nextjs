@@ -13,6 +13,7 @@
   padding-top: $spacing-05;
   padding-bottom: $spacing-07 * 4;
   padding-left: $spacing-06;
+  @include landing-page-background;
 }
 
 .landing-page__heading {
@@ -22,6 +23,7 @@
 .landing-page__r2 {
   margin-top: rem(-40px);
 }
+
 .tabs-group-content {
   padding: $spacing-10 $spacing-06;
 }

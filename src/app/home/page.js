@@ -61,7 +61,6 @@ export default function LandingPage() {
                     height={647}
                   />
                 </Column>
-                ;
               </Grid>
             </TabPanel>
             <TabPanel>
