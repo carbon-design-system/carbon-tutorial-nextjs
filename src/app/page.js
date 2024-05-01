@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 export default function Home() {
   return (
@@ -6,4 +7,12 @@ Hello Carbon! Well, not quite yet. This is the starting point for the Carbon Nex
     </div>
 
   )
+=======
+'use client';
+import { Button } from '@carbon/react';
+import LandingPage from './home/page';
+
+export default function Page() {
+  return <LandingPage />;
+>>>>>>> Stashed changes
 }
