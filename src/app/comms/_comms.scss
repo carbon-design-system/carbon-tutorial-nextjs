@@ -1,0 +1,62 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/themes' as *;
+
+.repo-comms__r1 {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+
+.repo-comms__r2 {
+  padding-top: $spacing-05;
+  color: $text-primary; // Change this value to the desired text color
+}
+
+.repo-comms__r3 {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+
+.repo-comms__r4 {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.repo-comms__r5 {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+
+.repo-comms__r6 {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+
+.output-area {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $text-primary; // Change this value to the desired text color
+
+  .bx--text-area {
+    color: $text-primary; // Change this value to the desired text color
+  }
+
+  .download-btn {
+    align-self: flex-end; /* Aligns the button to the right side of the output-area */
+    margin-top: 10px; /* Adds some space above the button */
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
