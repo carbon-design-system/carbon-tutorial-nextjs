@@ -13,21 +13,35 @@
     "ci-check": "yarn format:diff",
     "clean": "yarn cache clean && yarn install",
     "format": "prettier --write \"**/*.{js,md,scss}\"",
-    "format:diff": "prettier --list-different \"**/*.{js,md,scss}\""
+    "format:diff": "prettier --list-different \"**/*.{js,md,scss}\"",
+    "server": "node server/index.js"
   },
   "dependencies": {
+    "@carbon/pictograms-react": "^11.50.0",
     "@carbon/react": "^1.35.0",
+    "@octokit/core": "4.2.0",
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "docx": "^8.5.0",
+    "dotenv": "^16.4.5",
+    "encoding": "^0.1.13",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
+    "express": "^4.19.2",
+    "file-saver": "^2.0.5",
+    "html-to-docx": "^1.8.0",
     "next": "13.4.9",
+    "node-fetch": "^3.3.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.66.1"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
     "husky": "1.3.1",
     "lint-staged": "8.1.5",
+    "nodemon": "^3.1.0",
     "prettier": "^2.8.8"
   },
   "browserslist": [
