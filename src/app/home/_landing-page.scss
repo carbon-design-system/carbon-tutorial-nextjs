@@ -13,13 +13,17 @@
 
 .landing-page__banner {
   padding-top: $spacing-05;
-  padding-bottom: $spacing-07 * 4;
+  padding-bottom: $spacing-05 * 4;
   padding-left: $spacing-06;
   @include landing-page-background;
 }
 
 .landing-page__heading {
   @include type-style('productive-heading-05');
+}
+
+.landing-page__heading {
+  padding-top: $spacing-08;
 }
 
 .landing-page__r2 {

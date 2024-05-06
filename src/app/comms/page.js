@@ -15,9 +15,8 @@ import {
   MultiSelect,
   FormGroup,
   Stack,
-  Toggletip,
-  ToggletipButton,
-  ToggletipContent,
+  Accordion,
+  AccordionItem,
 } from '@carbon/react';
 import { Information, Download } from '@carbon/icons-react';
 import OutputArea from './OutputArea';
@@ -141,7 +140,7 @@ export default function CommsPage() {
           aria-label="Breadcrumb for navigating the page"
         >
           <BreadcrumbItem>
-            <a href="/">Getting started</a>
+            <a href="/">Home</a>
           </BreadcrumbItem>
         </Breadcrumb>
       </Column>
@@ -149,60 +148,70 @@ export default function CommsPage() {
         <Section level={4}>
           <Heading>
             Communications Generator
-            <Toggletip>
-              <ToggletipButton label="Additional information">
-                <Information />
-              </ToggletipButton>
-              <ToggletipContent align="right">
-                <p>This form is the input to the LLM</p>
-              </ToggletipContent>
-            </Toggletip>
+            <Information />
           </Heading>
         </Section>
-        <FormGroup>
-          <Stack gap={6}>
-            <TextInput
-              id="clientName"
-              labelText="Client Name"
-              value={clientName}
-              onChange={(e) => setClientName(e.target.value)}
-            />
-            <TextInput
-              id="projectName"
-              labelText="Project Name"
-              value={projectName}
-              onChange={(e) => setProjectName(e.target.value)}
-            />
-            <TextInput
-              id="communicationType"
-              labelText="Communication Type"
-              helperText="Specify the type like email, memo, etc."
-              value={communicationType}
-              onChange={(e) => setCommunicationType(e.target.value)}
-            />
-            <MultiSelect
-              label="Industry"
-              id="industry"
-              titleText="Industry"
-              items={items}
-              itemToString={(item) => (item ? item.text : '')}
-              selectionFeedback="top-after-reopen"
-              onChange={({ selectedItems }) => setIndustry(selectedItems)}
-            />
-            <Button type="button" onClick={handleSubmit} disabled={isLoading}>
-              Submit
-            </Button>
-          </Stack>
-        </FormGroup>
+        <Accordion className="my-accordion">
+          <AccordionItem title="Project Details">
+            <FormGroup>
+              <Stack gap={6}>
+                <TextInput
+                  id="projectName"
+                  labelText="Project Name"
+                  value={projectName}
+                  onChange={(e) => setProjectName(e.target.value)}
+                />
+              </Stack>
+            </FormGroup>
+          </AccordionItem>
+          <AccordionItem title="Client Details">
+            <FormGroup>
+              <Stack gap={6}>
+                <TextInput
+                  id="clientName"
+                  labelText="Client Name"
+                  value={clientName}
+                  onChange={(e) => setClientName(e.target.value)}
+                />
+              </Stack>
+            </FormGroup>
+          </AccordionItem>
+          <AccordionItem title="Communication Details">
+            <FormGroup>
+              <Stack gap={6}>
+                <TextInput
+                  id="communicationType"
+                  labelText="Communication Type"
+                  helperText="Specify the type like email, memo, etc."
+                  value={communicationType}
+                  onChange={(e) => setCommunicationType(e.target.value)}
+                />
+                <MultiSelect
+                  label="Industry"
+                  id="industry"
+                  titleText="Industry"
+                  items={items}
+                  itemToString={(item) => (item ? item.text : '')}
+                  selectionFeedback="top-after-reopen"
+                  onChange={({ selectedItems }) => setIndustry(selectedItems)}
+                />
+              </Stack>
+            </FormGroup>
+          </AccordionItem>
+          <AccordionItem title="Additional Information">
+            <p>Enter any additional information here.</p>
+          </AccordionItem>
+        </Accordion>
+        <Button type="button" onClick={handleSubmit} disabled={isLoading}>
+          Submit
+        </Button>
       </Column>
       <Column md={8} className="repo-comms__r2">
         <OutputArea
           text={outputText}
           isLoading={isLoading}
           exportToDocx={exportToDocx}
-        >
-          {' '}
-        </OutputArea>
+        />
       </Column>
     </Grid>
   );

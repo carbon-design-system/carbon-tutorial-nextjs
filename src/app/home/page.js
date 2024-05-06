@@ -49,9 +49,14 @@ export default function LandingPage() {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  <h3 className="landing-page__subheading">What is Ditial Change?</h3>
+                  <h3 className="landing-page__subheading">
+                    What is Digital Change?
+                  </h3>
                   <p className="landing-page__p">
-                  The Digital Change model provides a framework of accelerators and new ways of working with our clients on their path to transform their enterprise by innovating around the experiences they offer to their employees.
+                    The Digital Change model provides a framework of
+                    accelerators and new ways of working with our clients on
+                    their path to transform their enterprise by innovating
+                    around the experiences they offer to their employees.
                   </p>
                   <Button>Learn more</Button>
                 </Column>
