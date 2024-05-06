@@ -26,11 +26,11 @@ export default function LandingPage() {
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
         <Breadcrumb noTrailingSlash aria-label="Page navigation">
           <BreadcrumbItem>
-            <a href="/">Getting started</a>
+            <a href="/">Home</a>
           </BreadcrumbItem>
         </Breadcrumb>
         <h1 className="landing-page__heading">
-          Design &amp; build with Carbon
+          Digital Change Tools &amp; Accelerators
         </h1>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
@@ -49,13 +49,9 @@ export default function LandingPage() {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  <h3 className="landing-page__subheading">What is Carbon?</h3>
+                  <h3 className="landing-page__subheading">What is Ditial Change?</h3>
                   <p className="landing-page__p">
-                    Carbon is IBM’s open-source design system for digital
-                    products and experiences. With the IBM Design Language as
-                    its foundation, the system consists of working code, design
-                    tools and resources, human interface guidelines, and a
-                    vibrant community of contributors.
+                  The Digital Change model provides a framework of accelerators and new ways of working with our clients on their path to transform their enterprise by innovating around the experiences they offer to their employees.
                   </p>
                   <Button>Learn more</Button>
                 </Column>
