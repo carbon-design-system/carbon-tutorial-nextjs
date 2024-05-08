@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+import Image from 'next/image';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,6 +13,8 @@ import {
   TabPanel,
   Grid,
   Column,
+  unstable_StaticNotification as StaticNotification,
+  unstable_FeatureFlags as FeatureFlags,
 } from '@carbon/react';
 import {
   Advocate,
@@ -18,7 +22,6 @@ import {
   AcceleratingTransformation,
 } from '@carbon/pictograms-react';
 import { InfoSection, InfoCard } from '@/components/Info/Info';
-import Image from 'next/image';
 
 export default function LandingPage() {
   return (
@@ -30,7 +33,7 @@ export default function LandingPage() {
           </BreadcrumbItem>
         </Breadcrumb>
         <h1 className="landing-page__heading">
-          Digital Change Tools &amp; Accelerators
+          IBM Change Tools &amp; Accelerators
         </h1>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
@@ -50,15 +53,22 @@ export default function LandingPage() {
                   className="landing-page__tab-content"
                 >
                   <h3 className="landing-page__subheading">
-                    What is Digital Change?
+                    What is IBM Change?
                   </h3>
                   <p className="landing-page__p">
-                    The Digital Change model provides a framework of
-                    accelerators and new ways of working with our clients on
-                    their path to transform their enterprise by innovating
-                    around the experiences they offer to their employees.
+                    The IBM Change model provides a framework of accelerators
+                    and new ways of working with our clients on their path to
+                    transform their enterprise by innovating around the
+                    experiences they offer to their employees.
                   </p>
-                  <Button>Learn more</Button>
+                  <a
+                    href="https://w3.ibm.com/services/contentplus/offerings/enterprise-change-management.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Button>Learn more</Button>
+                  </a>
                 </Column>
                 <Column md={4} lg={{ span: 8, offset: 8 }} sm={4}>
                   <Image

@@ -146,10 +146,7 @@ export default function CommsPage() {
       </Column>
       <Column md={8} className="repo-comms__r2">
         <Section level={4}>
-          <Heading>
-            Communications Generator
-            <Information />
-          </Heading>
+          <Heading>Communications Generator</Heading>
         </Section>
         <Accordion className="my-accordion">
           <AccordionItem title="Project Details">

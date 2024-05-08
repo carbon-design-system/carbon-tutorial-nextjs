@@ -1,37 +1,48 @@
 @use '@carbon/react/scss/spacing' as *;
 @use '@carbon/themes' as *;
+@use '@carbon/react/scss/config' as *;
 
-.repo-comms__r1 {
+.repo-comms__r1,
+.repo-comms__r3,
+.repo-comms__r4,
+.repo-comms__r5,
+.repo-comms__r6 {
   padding-top: $spacing-05;
   padding-bottom: $spacing-05;
 }
 
 .repo-comms__r2 {
   padding-top: $spacing-05;
-  color: $text-primary; // Change this value to the desired text color
-}
-
-.repo-comms__r3 {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
+  color: $text-primary;
 }
 
 .repo-comms__r4 {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.repo-comms__r5 {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
+.output-container {
+  position: relative;
+  // padding-top: 50px; // Reduced top padding
 }
 
-.repo-comms__r6 {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; // Adds a little space between the header and the text area
+}
+
+.output-heading {
+  font-size: 16px; // Smaller font size for the heading
+  flex-grow: 1; // Allows the heading to take up necessary space pushing slug to the right
+}
+
+.slug-position {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .output-area {
@@ -44,24 +55,31 @@
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: $text-primary; // Change this value to the desired text color
+  color: $text-primary;
 
   .bx--text-area {
-    color: $text-primary; // Change this value to the desired text color
+    color: $text-primary;
   }
 
   .download-btn {
-    align-self: flex-end; /* Aligns the button to the right side of the output-area */
-    margin-top: 10px; /* Adds some space above the button */
-  }
-
-  // Responsive styles
-  @media (max-width: 768px) {
-    font-size: 12px;
+    align-self: flex-end;
+    margin-top: 10px;
   }
 }
 
+// Responsive styles for smaller devices
+@media (max-width: 768px) {
+  .output-container {
+    padding-top: 5px; // Smaller padding for smaller screens
+  }
+
+  .output-area {
+    font-size: 12px; // Smaller font size for readability on small devices
+  }
+}
+
+// Styling for custom accordion component
 .my-accordion {
-  margin-top: $spacing-05; // Add space above the accordion
-  margin-bottom: $spacing-05; // Add space below the accordion
+  margin-top: $spacing-05;
+  margin-bottom: $spacing-05;
 }
