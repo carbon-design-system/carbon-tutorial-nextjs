@@ -84,7 +84,7 @@ export default function CommsPage() {
           'Content-Type': 'application/json',
           Accept: 'application/json',
           Authorization:
-            'Bearer eyJraWQiOiIyMDI0MDUwNTA4MzkiLCJhbGciOiJSUzI1NiJ9.eyJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwiaWQiOiJJQk1pZC01NTAwMDAySFZBIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiYTE1NjY0NzItODIwYS00MWE1LWE1YjUtMjI0MmEwZWY2MWY5IiwiaWRlbnRpZmllciI6IjU1MDAwMDJIVkEiLCJnaXZlbl9uYW1lIjoiTm9haCIsImZhbWlseV9uYW1lIjoiUGV0cmllIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZW1haWwiOiJub2FocGV0cmllQGlibS5jb20iLCJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJhdXRobiI6eyJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZ2l2ZW5fbmFtZSI6Ik5vYWgiLCJmYW1pbHlfbmFtZSI6IlBldHJpZSIsImVtYWlsIjoibm9haHBldHJpZUBpYm0uY29tIn0sImFjY291bnQiOnsidmFsaWQiOnRydWUsImJzcyI6ImQxOGU4MWVhZjA4ZDRjNGE5MzA1OTNmN2IzNjYxM2FjIiwiZnJvemVuIjp0cnVlfSwiaWF0IjoxNzE1MDI4NzI0LCJleHAiOjE3MTUwMzIzMjQsImlzcyI6Imh0dHBzOi8vaWFtLmNsb3VkLmlibS5jb20vaWRlbnRpdHkiLCJncmFudF90eXBlIjoidXJuOmlibTpwYXJhbXM6b2F1dGg6Z3JhbnQtdHlwZTphcGlrZXkiLCJzY29wZSI6ImlibSBvcGVuaWQiLCJjbGllbnRfaWQiOiJkZWZhdWx0IiwiYWNyIjoxLCJhbXIiOlsicHdkIl19.rE2uA6yikAua-RG3szjXPHJyX5XJvHJ5Wix5ugq1qnVm4PqoXxnK3k2Xs0wZeM8AhxjdoH5UWVIHu9VV_x_BsV2MusqvfMvF2BUbQyWVekNSXosIPPaneA4in9XAJY4IcJ5y-z9ThvjBwVboyxaRYKB3PGH_qaZVzUOaPMt_9ituJWjAcbiBm7POnvsJOMRgHcDsa2460vIh5mTbf5sK2LZ7lE2OQCZo1Ae-k1zyN41erY9AIpnsoty4x5QacHrcRh9gSl9KxUQCFJ5uN2DWLRFEd83qlklVJ59zbmKxWM25IzPF4tOg4u5POunuhaRYnsKlU6wg_uiu-aIStCxgcA',
+            'Bearer eyJraWQiOiIyMDI0MDUwNTA4MzkiLCJhbGciOiJSUzI1NiJ9.eyJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwiaWQiOiJJQk1pZC01NTAwMDAySFZBIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiNThjMzAzMTgtMjExYi00ZDlhLTkyNDQtNmEwNDY5ZGNkMmFjIiwiaWRlbnRpZmllciI6IjU1MDAwMDJIVkEiLCJnaXZlbl9uYW1lIjoiTm9haCIsImZhbWlseV9uYW1lIjoiUGV0cmllIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZW1haWwiOiJub2FocGV0cmllQGlibS5jb20iLCJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJhdXRobiI6eyJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZ2l2ZW5fbmFtZSI6Ik5vYWgiLCJmYW1pbHlfbmFtZSI6IlBldHJpZSIsImVtYWlsIjoibm9haHBldHJpZUBpYm0uY29tIn0sImFjY291bnQiOnsidmFsaWQiOnRydWUsImJzcyI6ImQxOGU4MWVhZjA4ZDRjNGE5MzA1OTNmN2IzNjYxM2FjIiwiZnJvemVuIjp0cnVlfSwiaWF0IjoxNzE1MTc0MTUyLCJleHAiOjE3MTUxNzc3NTIsImlzcyI6Imh0dHBzOi8vaWFtLmNsb3VkLmlibS5jb20vaWRlbnRpdHkiLCJncmFudF90eXBlIjoidXJuOmlibTpwYXJhbXM6b2F1dGg6Z3JhbnQtdHlwZTphcGlrZXkiLCJzY29wZSI6ImlibSBvcGVuaWQiLCJjbGllbnRfaWQiOiJkZWZhdWx0IiwiYWNyIjoxLCJhbXIiOlsicHdkIl19.iN90gpb4FQKzFyJGKT1wHHM1BuC2Ildd17CgZvRPoORY0aq5DH9nhKsA4BOUh_La_Kr27O0Y6HSZkKOEl3yNGXcy0q1oDSQTwCemrEW9gp-E145rVB6K3sBzfRHTevWysVg6rPtAXD60O5nbgTtBOLIjn-4cN49fOtzDfZ6Cl_b1-6yODLjQngEwfugFRx8cTdeSuEzHzU5ISrNIXyrB1opaC4jTYyNJIvuIlMtcDn2uU1nq9r07YS3-0OpF-_hBs_ESeye9dHFE8Twhm7HkAyKZlzv3BBweSvkNDjitfrNSRjmWmBfBHpRA1nM3YitcsJSSIEwqPl1DrmFiv_Pfmg',
         },
         body: JSON.stringify({
           input: prompt,
@@ -158,6 +158,12 @@ export default function CommsPage() {
                   value={projectName}
                   onChange={(e) => setProjectName(e.target.value)}
                 />
+                <TextInput
+                  id="Technology"
+                  labelText="Technology"
+                  //value={technology}
+                  //onChange={(e) => setProjectName(e.target.value)}
+                />
               </Stack>
             </FormGroup>
           </AccordionItem>
@@ -169,6 +175,15 @@ export default function CommsPage() {
                   labelText="Client Name"
                   value={clientName}
                   onChange={(e) => setClientName(e.target.value)}
+                />
+                <MultiSelect
+                  label="Industry"
+                  id="industry"
+                  titleText="Industry"
+                  items={items}
+                  itemToString={(item) => (item ? item.text : '')}
+                  selectionFeedback="top-after-reopen"
+                  onChange={({ selectedItems }) => setIndustry(selectedItems)}
                 />
               </Stack>
             </FormGroup>
@@ -183,14 +198,11 @@ export default function CommsPage() {
                   value={communicationType}
                   onChange={(e) => setCommunicationType(e.target.value)}
                 />
-                <MultiSelect
-                  label="Industry"
-                  id="industry"
-                  titleText="Industry"
-                  items={items}
-                  itemToString={(item) => (item ? item.text : '')}
-                  selectionFeedback="top-after-reopen"
-                  onChange={({ selectedItems }) => setIndustry(selectedItems)}
+                <TextInput
+                  id="audience"
+                  labelText="Audience"
+                  // value={communicationType}
+                  // onChange={(e) => setCommunicationType(e.target.value)}
                 />
               </Stack>
             </FormGroup>
