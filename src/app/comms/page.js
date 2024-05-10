@@ -17,21 +17,94 @@ import {
   Stack,
   Accordion,
   AccordionItem,
+  Dropdown,
+  TextArea,
 } from '@carbon/react';
 import { Information, Download } from '@carbon/icons-react';
 import OutputArea from './OutputArea';
 
 const items = [
+  { id: 'aerospace_defence', text: 'Aerospace & Defence' },
+  { id: 'automotive', text: 'Automotive' },
+  { id: 'banking', text: 'Banking' },
+  { id: 'chemicals_petroleum', text: 'Chemicals & Petroleum' },
+  { id: 'consumer_products', text: 'Consumer Products' },
+  { id: 'education', text: 'Education' },
+  { id: 'electronics', text: 'Electronics' },
+  {
+    id: 'energy_environment_utilities',
+    text: 'Energy, Environment, & Utilities',
+  },
+  { id: 'financial_markets', text: 'Financial Markets' },
   { id: 'government', text: 'Government' },
-  { id: 'oil&gas', text: 'Oil & Gas' },
-  { id: 'communications', text: 'Communications' },
+  { id: 'healthcare', text: 'Healthcare' },
+  { id: 'insurance', text: 'Insurance' },
+  { id: 'life_sciences', text: 'Life Sciences' },
+  { id: 'media_entertainment', text: 'Media & Entertainment' },
+  { id: 'industrial_products', text: 'Industrial Products' },
+  { id: 'retail', text: 'Retail' },
+  { id: 'telecommunications', text: 'Telecommunications' },
+  { id: 'travel_transportation', text: 'Travel & Transportation' },
+  { id: 'cross_industry', text: 'Cross Industry' },
+];
+
+const communicationMethodsList = [
+  { id: '1', text: 'Email' },
+  { id: '2', text: 'Phone Call' },
+  { id: '3', text: 'Video Call' },
+  { id: '4', text: 'Instant Messaging' },
+  { id: '5', text: 'In-Person Meeting' },
+  { id: '6', text: 'Project Management Software' },
+  { id: '7', text: 'Collaboration Tools' },
+  { id: '8', text: 'Status Reports' },
+  { id: '9', text: 'Newsletters' },
+  { id: '10', text: 'Memos' },
+  { id: '11', text: 'Presentations' },
+  { id: '12', text: 'Workshops' },
+  { id: '13', text: 'Surveys and Polls' },
+  { id: '14', text: 'Documentation Sharing' },
+  { id: '15', text: 'Bulletin Boards' },
+  { id: '16', text: 'Town Hall Meetings' },
+  { id: '17', text: 'Webinars' },
+  { id: '18', text: 'Social Media' },
+  { id: '19', text: 'Project Dashboards' },
+  { id: '20', text: 'Feedback Forms' },
+];
+
+const tonesList = [
+  { id: '1', text: 'Formal' },
+  { id: '2', text: 'Informal' },
+  { id: '3', text: 'Professional' },
+  { id: '4', text: 'Casual' },
+  { id: '5', text: 'Friendly' },
+  { id: '6', text: 'Urgent' },
+  { id: '7', text: 'Encouraging' },
+  { id: '8', text: 'Motivational' },
+  { id: '9', text: 'Neutral' },
+  { id: '10', text: 'Positive' },
+  { id: '11', text: 'Concise' },
+  { id: '12', text: 'Detailed' },
+  { id: '13', text: 'Authoritative' },
+  { id: '14', text: 'Empathetic' },
+  { id: '15', text: 'Optimistic' },
+  { id: '16', text: 'Persuasive' },
+  { id: '17', text: 'Inquisitive' },
+  { id: '18', text: 'Direct' },
+  { id: '19', text: 'Supportive' },
+  { id: '20', text: 'Cautionary' },
 ];
 
 export default function CommsPage() {
   const [clientName, setClientName] = useState('');
   const [projectName, setProjectName] = useState('');
-  const [communicationType, setCommunicationType] = useState('');
+  const [audienceType, setAudienceType] = useState('');
   const [industry, setIndustry] = useState([]);
+  const [communicationMethod, setCommunicationMethod] = useState([]);
+  const [tone, setTone] = useState(tonesList[0]);
+  const [additionalDetails, setAdditionalDetails] = useState('');
+  const [purpose, setPurpose] = useState('');
+  const [keyMessages, setKeyMessages] = useState('');
+  const [technology, setTechnology] = useState('');
   const [outputText, setOutputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -63,9 +136,20 @@ export default function CommsPage() {
   };
 
   const constructPrompt = () => {
-    return `Generate a communication (${communicationType}) for ${clientName} regarding ${projectName}. Additional details can be found below: Industry: ${industry
-      .map((item) => item.text)
-      .join(', ')}, Communication Type: ${communicationType}`;
+    return `
+      Generate a communication (${
+        communicationMethod.text
+      }) for the project "${projectName}" managed by ${clientName}. 
+      Audience: ${audienceType}. 
+      Purpose: ${purpose}. 
+      This communication should address change management aspects. 
+      The tone should be ${tone.text}. 
+      Technology involved: ${technology}.
+      Key points to cover include: ${additionalDetails}. 
+      Key messages to highlight: ${keyMessages}.
+      The industry context is ${industry.map((item) => item.text).join(', ')}. 
+      Ensure the communication supports stakeholders through the change process, providing clear and actionable information.
+    `;
   };
 
   const handleSubmit = async (e) => {
@@ -84,7 +168,7 @@ export default function CommsPage() {
           'Content-Type': 'application/json',
           Accept: 'application/json',
           Authorization:
-            'Bearer eyJraWQiOiIyMDI0MDUwNTA4MzkiLCJhbGciOiJSUzI1NiJ9.eyJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwiaWQiOiJJQk1pZC01NTAwMDAySFZBIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiNGE1YWMxM2UtMDg2MC00Zjg3LTg0YjAtMmM1Zjc4OWNlM2M5IiwiaWRlbnRpZmllciI6IjU1MDAwMDJIVkEiLCJnaXZlbl9uYW1lIjoiTm9haCIsImZhbWlseV9uYW1lIjoiUGV0cmllIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZW1haWwiOiJub2FocGV0cmllQGlibS5jb20iLCJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJhdXRobiI6eyJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZ2l2ZW5fbmFtZSI6Ik5vYWgiLCJmYW1pbHlfbmFtZSI6IlBldHJpZSIsImVtYWlsIjoibm9haHBldHJpZUBpYm0uY29tIn0sImFjY291bnQiOnsidmFsaWQiOnRydWUsImJzcyI6ImQxOGU4MWVhZjA4ZDRjNGE5MzA1OTNmN2IzNjYxM2FjIiwiZnJvemVuIjp0cnVlfSwiaWF0IjoxNzE1MTkyMDI1LCJleHAiOjE3MTUxOTU2MjUsImlzcyI6Imh0dHBzOi8vaWFtLmNsb3VkLmlibS5jb20vaWRlbnRpdHkiLCJncmFudF90eXBlIjoidXJuOmlibTpwYXJhbXM6b2F1dGg6Z3JhbnQtdHlwZTphcGlrZXkiLCJzY29wZSI6ImlibSBvcGVuaWQiLCJjbGllbnRfaWQiOiJkZWZhdWx0IiwiYWNyIjoxLCJhbXIiOlsicHdkIl19.bbor7Vx6crEFyubWkxEqgcG7n8K2q3HNePsqS6yz1hlvkEICaPAGA4U1TC37hMS6C4DMDWU-TF6iBTXlAwX-X4Uex0p56UlxY-2ai5ZPuZzqvTri9QxGfe2spRZfsTVoqmBbNZdb4Re3N6G7-yTCUaJzA74QzqDji7cIQzjrmXBuNRv8DQiLxU6Llvb1OG5fpksAvSeg-wu2RyUHQfNzU2xoE_29MGpBlmfU4UqH5eMW2jasV7Ro-brwqho-j1wdSXWaf1hUafRD9UOxoVafSZL9quGThG-m5JicG_wJmEf70Xt7k3pI578LQ_7bqQ6zlqtd-vtH2j4q5yc9ywsMKg',
+            'Bearer eyJraWQiOiIyMDI0MDUwNTA4MzkiLCJhbGciOiJSUzI1NiJ9.eyJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwiaWQiOiJJQk1pZC01NTAwMDAySFZBIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiMzUxNDljNDEtYzljMi00ZmEyLTk3MGUtZGJmYmEyYzAxZWYwIiwiaWRlbnRpZmllciI6IjU1MDAwMDJIVkEiLCJnaXZlbl9uYW1lIjoiTm9haCIsImZhbWlseV9uYW1lIjoiUGV0cmllIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZW1haWwiOiJub2FocGV0cmllQGlibS5jb20iLCJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJhdXRobiI6eyJzdWIiOiJub2FocGV0cmllQGlibS5jb20iLCJpYW1faWQiOiJJQk1pZC01NTAwMDAySFZBIiwibmFtZSI6Ik5vYWggUGV0cmllIiwiZ2l2ZW5fbmFtZSI6Ik5vYWgiLCJmYW1pbHlfbmFtZSI6IlBldHJpZSIsImVtYWlsIjoibm9haHBldHJpZUBpYm0uY29tIn0sImFjY291bnQiOnsidmFsaWQiOnRydWUsImJzcyI6ImQxOGU4MWVhZjA4ZDRjNGE5MzA1OTNmN2IzNjYxM2FjIiwiZnJvemVuIjp0cnVlfSwiaWF0IjoxNzE1MzcxMzY2LCJleHAiOjE3MTUzNzQ5NjYsImlzcyI6Imh0dHBzOi8vaWFtLmNsb3VkLmlibS5jb20vaWRlbnRpdHkiLCJncmFudF90eXBlIjoidXJuOmlibTpwYXJhbXM6b2F1dGg6Z3JhbnQtdHlwZTphcGlrZXkiLCJzY29wZSI6ImlibSBvcGVuaWQiLCJjbGllbnRfaWQiOiJkZWZhdWx0IiwiYWNyIjoxLCJhbXIiOlsicHdkIl19.wyL7331FPCG3tN9rxWR-XSsNGRI7dBO6qR-qRMukDjoqzNPMc8GWuVTAx9TOOIh0wGRMT6wnmAe8NANTM5SZELiANmWzD4h066e8Gw36hRI8kEfjV5CL9uzy1YzJ2zhojo3hMfZLC6cEXZQFLXXAm7QVqh6ePRtooFSPrepmP3CcmUb56Ga9R60WUwuZsMi3_aqkeYI2zyhg5epfG589tgGvYJ8sCYk2X0FmbpCbLf5s-sI_95JgMHOGPmIHe0L1pzj6jtFR_cnMzeYcVaFxsDG1nIU2jgtLhwwAm4ZhDrGcUqjfrXKyqxSslE30uRVhj4geVF341pcI9kQ-0O22jg',
         },
         body: JSON.stringify({
           input: prompt,
@@ -164,12 +248,6 @@ export default function CommsPage() {
                   //value={technology}
                   //onChange={(e) => setProjectName(e.target.value)}
                 />
-              </Stack>
-            </FormGroup>
-          </AccordionItem>
-          <AccordionItem title="Client Details">
-            <FormGroup>
-              <Stack gap={6}>
                 <TextInput
                   id="clientName"
                   labelText="Client Name"
@@ -188,27 +266,69 @@ export default function CommsPage() {
               </Stack>
             </FormGroup>
           </AccordionItem>
-          <AccordionItem title="Communication Details">
+          <AccordionItem title="Audience & Delivery">
             <FormGroup>
               <Stack gap={6}>
                 <TextInput
-                  id="communicationType"
-                  labelText="Communication Type"
-                  helperText="Specify the type like email, memo, etc."
-                  value={communicationType}
-                  onChange={(e) => setCommunicationType(e.target.value)}
-                />
-                <TextInput
                   id="audience"
                   labelText="Audience"
-                  // value={communicationType}
-                  // onChange={(e) => setCommunicationType(e.target.value)}
+                  value={audienceType}
+                  onChange={(e) => setAudienceType(e.target.value)}
+                />
+                <Dropdown
+                  id="communication-method"
+                  titleText="Preferred Communication Method"
+                  helperText="Select your preferred method of communication"
+                  label="Select a method"
+                  items={communicationMethodsList}
+                  itemToString={(item) => (item ? item.text : '')}
+                  onChange={(e) => setCommunicationMethod(e.selectedItem)}
+                  value={communicationMethod}
+                />
+              </Stack>
+            </FormGroup>
+          </AccordionItem>
+          <AccordionItem title="Communication Content">
+            <FormGroup>
+              <Stack gap={6}>
+                <TextInput
+                  id="purpose"
+                  labelText="Purpose"
+                  helperText="Specify the purpose of the communication"
+                  value={purpose}
+                  onChange={(e) => setPurpose(e.target.value)}
+                />
+                <TextArea
+                  labelText="Key Messages"
+                  helperText="Highlight the key messages to be communicated"
+                  rows={4}
+                  id="key-messages"
+                  value={keyMessages}
+                  onChange={(e) => setKeyMessages(e.target.value)}
+                />
+                <Dropdown
+                  id="tone-selection"
+                  titleText="Select Communication Tone"
+                  helperText="Choose the tone for your communication"
+                  label="Select a tone"
+                  direction="bottom"
+                  items={tonesList}
+                  itemToString={(item) => (item ? item.text : '')}
+                  onChange={(e) => setTone(e.selectedItem)}
+                  value={tone}
                 />
               </Stack>
             </FormGroup>
           </AccordionItem>
           <AccordionItem title="Additional Information">
-            <p>Enter any additional information here.</p>
+            <TextArea
+              labelText="Additional Details"
+              //helperText="Optional helper text"
+              rows={4}
+              id="text-area-1"
+              value={additionalDetails}
+              onChange={(e) => setAdditionalDetails(e.target.value)}
+            />{' '}
           </AccordionItem>
         </Accordion>
         <Button type="button" onClick={handleSubmit} disabled={isLoading}>

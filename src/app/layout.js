@@ -3,7 +3,7 @@ import './globals.scss';
 import { Providers } from './providers';
 
 export const metadata = {
-  title: 'Digital Change',
+  title: 'Change+',
   description: 'Tools for accelerating digital transformation',
 };
 
