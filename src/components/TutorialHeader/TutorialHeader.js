@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Header,
@@ -13,10 +13,10 @@ import {
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
-} from "@carbon/react";
-import { Switcher, Notification, UserAvatar } from "@carbon/icons-react";
+} from '@carbon/react';
+import { Switcher, Notification, UserAvatar } from '@carbon/icons-react';
 
-import Link from "next/link";
+import Link from 'next/link';
 
 const TutorialHeader = () => (
   <HeaderContainer
