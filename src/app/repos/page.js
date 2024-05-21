@@ -1,6 +1,4 @@
 'use client';
-
-import RepoTable from './RepoTable';
 import {
   Link,
   DataTableSkeleton,
@@ -8,9 +6,9 @@ import {
   Column,
   Grid,
 } from '@carbon/react';
-
 import React, { useEffect, useState } from 'react';
 import { Octokit } from '@octokit/core';
+import RepoTable from './RepoTable';
 
 const octokitClient = new Octokit({});
 
