@@ -16,6 +16,7 @@
     "format:diff": "prettier --list-different \"**/*.{js,md,scss}\""
   },
   "dependencies": {
+    "@carbon/pictograms-react": "^11.62.0",
     "@carbon/react": "^1.35.0",
     "@octokit/core": "4.2.0",
     "eslint": "8.44.0",
@@ -23,7 +24,8 @@
     "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
