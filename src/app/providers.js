@@ -1,6 +1,6 @@
 'use client';
 
-import TutorialHeader from './components/TutorialHeader/Tutorialheader';
+import TutorialHeader from '../components/TutorialHeader/Tutorialheader';
 import { Content, Theme } from '@carbon/react';
 
 export function Providers({ children }) {
