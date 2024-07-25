@@ -16,49 +16,60 @@ import {
 } from '@carbon/react';
 
 const RepoTable = ({ rows, headers }) => {
+  const getRowDescription = (rowId) => {
+    const row = rows.find(({ id }) => id === rowId);
+    return row ? row.description : '';
+  };
+
   return (
     <DataTable
       rows={rows}
       headers={headers}
       render={({
-        rows,
+        rows: dtRows,
         headers,
         getHeaderProps,
         getRowProps,
         getTableProps,
-      }) => (
-        <TableContainer
-          title="Carbon Repositories"
-          description="A collection of public Carbon repositories."
-        >
-          <Table {...getTableProps()}>
-            <TableHead>
-              <TableRow>
-                <TableExpandHeader />
-                {headers.map((header) => (
-                  <TableHeader key={header.key} {...getHeaderProps({ header })}>
-                    {header.header}
-                  </TableHeader>
+      }) => {
+        console.log('🚀 ~ RepoTable ~ dtRows:', dtRows, rows);
+        return (
+          <TableContainer
+            title="Carbon Repositories"
+            description="A collection of public Carbon repositories."
+          >
+            <Table {...getTableProps()}>
+              <TableHead>
+                <TableRow>
+                  <TableExpandHeader />
+                  {headers.map((header) => (
+                    <TableHeader
+                      key={header.key}
+                      {...getHeaderProps({ header })}
+                    >
+                      {header.header}
+                    </TableHeader>
+                  ))}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {dtRows.map((row) => (
+                  <React.Fragment key={row.id}>
+                    <TableExpandRow {...getRowProps({ row })}>
+                      {row.cells.map((cell) => (
+                        <TableCell key={cell.id}>{cell.value}</TableCell>
+                      ))}
+                    </TableExpandRow>
+                    <TableExpandedRow colSpan={headers.length + 1}>
+                      <p>{getRowDescription(row.id)}</p>
+                    </TableExpandedRow>
+                  </React.Fragment>
                 ))}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <React.Fragment key={row.id}>
-                  <TableExpandRow {...getRowProps({ row })}>
-                    {row.cells.map((cell) => (
-                      <TableCell key={cell.id}>{cell.value}</TableCell>
-                    ))}
-                  </TableExpandRow>
-                  <TableExpandedRow colSpan={headers.length + 1}>
-                    <p>Row description</p>
-                  </TableExpandedRow>
-                </React.Fragment>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      )}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        );
+      }}
     />
   );
 };
