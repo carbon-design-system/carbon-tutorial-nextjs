@@ -16,12 +16,14 @@
     "format:diff": "prettier --list-different \"**/*.{js,md,scss}\""
   },
   "dependencies": {
-    "@carbon/react": "^1.35.0",
+    "@carbon/icons-react": "^11.47.1",
+    "@carbon/react": "1.33.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "1.63.6"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
