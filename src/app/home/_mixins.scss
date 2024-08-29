@@ -1,0 +1,18 @@
+// Looking at the design, we need a wall-to-wall light gray background behind the banner and also behind the third row.
+// This is a great opportunity to use a Sass mixin. We could put this at the top of _landing-page.scss, but it’s
+// best practice to place mixins in a dedicated file, so create a _mixins.scss file in src/app/home.
+
+// Add the following in _mixins.scss. Per the design we need to use Gray 10 for our banner background color, which can
+// be set with the $layer-01 color token. Also, we want the background to extend into the grid’s outermost gutters to go
+// the full width of the viewport, so given the DOM structure, we can achieve that by setting the background in an
+// absolutely positioned pseudo element.
+
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+
+@mixin landing-page-background() {
+  background-color: $layer-01;
+  position: relative;
+}
+
+// After you have created _mixins.scss, import it at the top of _landing-page.scss. By now you should have six imports:

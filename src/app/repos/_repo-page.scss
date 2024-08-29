@@ -1,0 +1,11 @@
+// Our styles for the repo page are mostly fine. We just need to update a few vertical spacing issues.
+// In _repo-page.scss, add the following styles:
+
+@use '@carbon/react/scss/spacing' as *;
+
+.repo-page__r1 {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+
+// Congratulations! We’ve now created our static repo page!

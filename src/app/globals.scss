@@ -1,10 +1,12 @@
 @use '@carbon/react';
 
+// Since we are using our breakpoint mixin, we need to import the styles for that below our Carbon styles import:
+@use '@carbon/react/scss/breakpoint' as *;
+
 @use '@/components/TutorialHeader/tutorial-header';
 
 @use '@/app/home/landing-page';
 @use '@/app/repos/repo-page';
-
 
 /// Remove overrides once Carbon bugs are fixed upstream.
 /// Need grid option to not add page gutters at large viewports, to also use when nesting grids
@@ -20,5 +22,22 @@
 /// @link https://github.com/carbon-design-system/carbon/issues/3010
 .cds--content {
   margin-top: 3rem;
+  padding: 0;
   background: var(--cds-background);
 }
+
+// We are almost done with the landing page. You may notice a few styles are off. To fix this, we’ll update
+// some of the overriding styles in globals.scss. We already have some overriding styles for .cds--content.
+// We need to add padding: 0; to this selector and add one more selector for the grid below that:
+// ...same to "--cdc--content" add: "padding:0"
+
+.cds--content .cds--css-grid {
+  max-width: 100%;
+  @include breakpoint(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+// REACT-Tutorial comment before "Add repo page grid" section:
+// Ta-da! You should see a finished landing page! Now we can move on to the repo page.
