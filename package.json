@@ -16,12 +16,15 @@
     "format:diff": "prettier --list-different \"**/*.{js,md,scss}\""
   },
   "dependencies": {
-    "@carbon/react": "^1.35.0",
+    "@carbon/react": "1.33.0",
+
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "1.63.6"
+
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
@@ -66,5 +69,7 @@
     "printWidth": 80,
     "singleQuote": true,
     "trailingComma": "es5"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
   }
 }
