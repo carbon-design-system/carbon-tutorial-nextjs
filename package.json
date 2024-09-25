@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@carbon/react": "^1.35.0",
+    "@octokit/core": "4.2.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",
@@ -67,5 +68,6 @@
     "printWidth": 80,
     "singleQuote": true,
     "trailingComma": "es5"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
