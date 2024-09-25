@@ -12,8 +12,14 @@ import {
   Grid,
   Column,
 } from '@carbon/react';
-import Image from 'next/image';
 
+import {
+  Advocate,
+  Globe,
+  AcceleratingTransformation,
+} from '@carbon/pictograms-react';
+import Image from 'next/image';
+import { InfoSection, InfoCard } from '@/components/Info/Info';
 export default function LandingPage() {
   return (
     <Grid className="landing-page" fullWidth>
@@ -97,7 +103,7 @@ export default function LandingPage() {
           </TabPanels>
         </Tabs>
       </Column>
-      <Column lg={16} md={8} sm={4} className="landing-page__r3">
+      {/* <Column lg={16} md={8} sm={4} className="landing-page__r3">
         <Grid>
           <Column lg={4} md={2} sm={4}>
             <h3 className="landing-page__label">The Principles</h3>
@@ -127,7 +133,24 @@ export default function LandingPage() {
             Carbon is Consistent
           </Column>
         </Grid>
-      </Column>
+      </Column> */}
+      <InfoSection heading="The Principles">
+        <InfoCard
+          heading="Carbon is Open"
+          body="It's a distrubuted effort, guided by the priniples of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
+          icon={() => <Advocate size={32} />}
+        />
+        <InfoCard
+          heading="Carbon is Modular"
+          body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
+          icon={() => <AcceleratingTransformation size={32} />}
+        />
+        <InfoCard
+          heading="Carbon is Consistent"
+          body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
+          icon={() => <Globe size={32} />}
+        />
+      </InfoSection>
     </Grid>
   );
 }
