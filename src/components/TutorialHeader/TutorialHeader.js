@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Header,
@@ -13,10 +13,10 @@ import {
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
-} from "@carbon/react";
-import { Switcher, Notification, UserAvatar } from "@carbon/icons-react";
+} from '@carbon/react';
+import { Switcher, Notification, UserAvatar } from '@carbon/icons-react';
 
-import Link from "next/link";
+import Link from 'next/link';
 
 const TutorialHeader = () => (
   <HeaderContainer
@@ -29,11 +29,14 @@ const TutorialHeader = () => (
           isActive={isSideNavExpanded}
         />
         <Link href="/" passHref legacyBehavior>
-          <HeaderName prefix="IBM">Carbon Tutorial</HeaderName>
+          <HeaderName prefix="IBM">MMA iX</HeaderName>
         </Link>
         <HeaderNavigation aria-label="Carbon Tutorial">
+          <Link href="/media" passHref legacyBehavior>
+            <HeaderMenuItem>Media Content Creation</HeaderMenuItem>
+          </Link>
           <Link href="/repos" passHref legacyBehavior>
-            <HeaderMenuItem>Repositories</HeaderMenuItem>
+            <HeaderMenuItem>Repository</HeaderMenuItem>
           </Link>
         </HeaderNavigation>
         <SideNav
@@ -43,8 +46,11 @@ const TutorialHeader = () => (
         >
           <SideNavItems>
             <HeaderSideNavItems>
+              <Link href="/media" passHref legacyBehavior>
+                <HeaderMenuItem>Media Content Creation</HeaderMenuItem>
+              </Link>
               <Link href="/repos" passHref legacyBehavior>
-                <HeaderMenuItem>Repositories</HeaderMenuItem>
+                <HeaderMenuItem>Repo</HeaderMenuItem>
               </Link>
             </HeaderSideNavItems>
           </SideNavItems>
