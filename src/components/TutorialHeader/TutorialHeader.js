@@ -40,7 +40,9 @@ const TutorialHeader = () => (
         >
           <SideNavItems>
             <HeaderSideNavItems>
-              <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
+              <Link href="/repos" passHref legacyBehavior>
+                <HeaderMenuItem>Repositories</HeaderMenuItem>
+              </Link>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
