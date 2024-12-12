@@ -1,0 +1,25 @@
+diff a/src/app/home/page.js b/src/app/home/page.js	(rejected hunks)
+@@ -45 +45,2 @@ export default function LandingPage() {
+-                  className="landing-page__tab-content">
++                  className="landing-page__tab-content"
++                >
+@@ -73 +74,2 @@ export default function LandingPage() {
+-                  className="landing-page__tab-content">
++                  className="landing-page__tab-content"
++                >
+@@ -87 +89,2 @@ export default function LandingPage() {
+-                  className="landing-page__tab-content">
++                  className="landing-page__tab-content"
++                >
+@@ -107 +110,2 @@ export default function LandingPage() {
+-            className="landing-page__title">
++            className="landing-page__title"
++          >
+@@ -114 +118,2 @@ export default function LandingPage() {
+-            className="landing-page__title">
++            className="landing-page__title"
++          >
+@@ -121 +126,2 @@ export default function LandingPage() {
+-            className="landing-page__title">
++            className="landing-page__title"
++          >

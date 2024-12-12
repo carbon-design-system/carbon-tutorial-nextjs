@@ -1,0 +1,13 @@
+diff a/src/components/TutorialHeader/TutorialHeader.js b/src/components/TutorialHeader/TutorialHeader.js	(rejected hunks)
+@@ -42 +42,2 @@ const TutorialHeader = () => (
+-          isPersistent={false}>
++          isPersistent={false}
++        >
+@@ -55 +56,2 @@ const TutorialHeader = () => (
+-            className="action-icons">
++            className="action-icons"
++          >
+@@ -61 +63,2 @@ const TutorialHeader = () => (
+-            className="action-icons">
++            className="action-icons"
++          >
