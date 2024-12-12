@@ -3,7 +3,7 @@ import { Providers } from './providers';
 
 export const metadata = {
   title: 'Carbon + Next13',
-  description: 'IBM Carbon Tutorial with NextJS 13',
+  description: 'IBM Carbon Tutorial with Next.js 13',
 };
 
 export default function RootLayout({ children }) {
