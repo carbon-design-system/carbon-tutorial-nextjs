@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Header,
@@ -13,42 +13,30 @@ import {
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
-} from "@carbon/react";
-import { Switcher, Notification, UserAvatar } from "@carbon/icons-react";
+  Switcher,
+  SwitcherItem,
+  SwitcherDivider,
+  HeaderPanel,
+} from '@carbon/react';
 
-import Link from "next/link";
+import {
+  Notification,
+  UserAvatar,
+  Menu,
+  Switcher as SwitcherIcon,
+} from '@carbon/icons-react';
+
+import Link from 'next/link';
 
 const TutorialHeader = () => (
   <HeaderContainer
     render={({ isSideNavExpanded, onClickSideNavExpand }) => (
       <Header aria-label="Carbon Tutorial">
         <SkipToContent />
-        <HeaderMenuButton
-          aria-label="Open menu"
-          onClick={onClickSideNavExpand}
-          isActive={isSideNavExpanded}
-        />
+        <HeaderMenuButton aria-label="Open menu" />
         <Link href="/" passHref legacyBehavior>
           <HeaderName prefix="IBM">Carbon Tutorial</HeaderName>
         </Link>
-        <HeaderNavigation aria-label="Carbon Tutorial">
-          <Link href="/repos" passHref legacyBehavior>
-            <HeaderMenuItem>Repositories</HeaderMenuItem>
-          </Link>
-        </HeaderNavigation>
-        <SideNav
-          aria-label="Side navigation"
-          expanded={isSideNavExpanded}
-          isPersistent={false}
-        >
-          <SideNavItems>
-            <HeaderSideNavItems>
-              <Link href="/repos" passHref legacyBehavior>
-                <HeaderMenuItem>Repositories</HeaderMenuItem>
-              </Link>
-            </HeaderSideNavItems>
-          </SideNavItems>
-        </SideNav>
         <HeaderGlobalBar>
           <HeaderGlobalAction
             aria-label="Notifications"
@@ -64,10 +52,50 @@ const TutorialHeader = () => (
           >
             <UserAvatar size={20} />
           </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
-            <Switcher size={20} />
+          <HeaderGlobalAction
+            aria-label={isSideNavExpanded ? 'Close switcher' : 'Open switcher'}
+            aria-expanded={isSideNavExpanded}
+            isActive={isSideNavExpanded}
+            onClick={onClickSideNavExpand}
+            tooltipAlignment="end"
+            id="switcher-button"
+          >
+            <SwitcherIcon size={20} />
           </HeaderGlobalAction>
         </HeaderGlobalBar>
+        <HeaderPanel
+          expanded={isSideNavExpanded}
+          onHeaderPanelFocus={onClickSideNavExpand}
+          href="#switcher-button"
+        >
+          <Switcher
+            aria-label="Switcher Container"
+            expanded={isSideNavExpanded}
+          >
+            <Link href="/repos" passHref legacyBehavior>
+              <SwitcherItem aria-label="Repositories" href="/repos">
+                Repositories
+              </SwitcherItem>
+            </Link>
+            <SwitcherDivider />
+            <SwitcherItem href="#" aria-label="Link 2">
+              Link 2
+            </SwitcherItem>
+            <SwitcherItem href="#" aria-label="Link 3">
+              Link 3
+            </SwitcherItem>
+            <SwitcherItem href="#" aria-label="Link 4">
+              Link 4
+            </SwitcherItem>
+            <SwitcherItem href="#" aria-label="Link 5">
+              Link 5
+            </SwitcherItem>
+            <SwitcherDivider />
+            <SwitcherItem href="#" aria-label="Link 6">
+              Link 6
+            </SwitcherItem>
+          </Switcher>
+        </HeaderPanel>
       </Header>
     )}
   />
