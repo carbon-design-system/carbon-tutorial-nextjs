@@ -26,7 +26,7 @@ const RepoTable = ({ rows, headers }) => {
           <Table {...getTableProps()}>
             <TableHead>
               <TableRow>
-                {headers.map(header => (
+                {headers.map((header) => (
                   <TableHeader key={header.key} {...getHeaderProps({ header })}>
                     {header.header}
                   </TableHeader>
@@ -34,9 +34,9 @@ const RepoTable = ({ rows, headers }) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map(row => (
+              {rows.map((row) => (
                 <TableRow key={row.id} {...getRowProps({ row })}>
-                  {row.cells.map(cell => (
+                  {row.cells.map((cell) => (
                     <TableCell key={cell.id}>{cell.value}</TableCell>
                   ))}
                 </TableRow>
