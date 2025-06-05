@@ -41,7 +41,7 @@ const RepoTable = ({ rows, headers }) => {
               <TableRow>
                 <TableExpandHeader />
                 {headers.map((header) => (
-                  <TableHeader key={header.key} {...getHeaderProps({ header })}>
+                  <TableHeader {...getHeaderProps({ header })} key={header.key}>
                     {header.header}
                   </TableHeader>
                 ))}
