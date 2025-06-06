@@ -1,9 +1,17 @@
+'use client'; // makes it client side
+import { Button } from '@carbon/react';
+import LandingPage from './home/page';
+import RepoPage from './repos/page';
 
-export default function Home() {
-  return (
-    <div>
-Hello Carbon! Well, not quite yet. This is the starting point for the Carbon NextJS tutorial.
-    </div>
+export default function Page() {
+  return <LandingPage />;
+}
 
-  )
+export function Home() {
+  return <Button>Button</Button>;
+}
+
+export function Repos() {
+  // do i need this
+  return <RepoPage />;
 }
