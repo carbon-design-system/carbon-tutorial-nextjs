@@ -2,6 +2,7 @@
 @use '@carbon/react/scss/breakpoint' as *;
 
 @use '@/components/TutorialHeader/tutorial-header';
+@use '@/components/Info/info';
 
 @use '@/app/home/landing-page';
 @use '@/app/repos/repo-page';
@@ -21,7 +22,7 @@
 .cds--content {
   margin-top: 3rem;
   padding: 0;
-//  background: var(--cds-background);
+  //  background: var(--cds-background);
 }
 
 .cds--content .cds--css-grid {
